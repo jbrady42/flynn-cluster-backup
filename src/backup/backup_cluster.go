@@ -79,7 +79,7 @@ func (s clusterBackup) backup() {
 func (s clusterBackup) upload() {
 	now := time.Now()
 	daily := fmt.Sprintf("daily/%s.tar", now.Format("2006-01-02"))
-	hourly := fmt.Sprintf("hourly/%s.tar", now.Format("02_15-04-05"))
+	hourly := fmt.Sprintf("hourly/%s.tar", now.Format("2006-01-02_15-04-05"))
 
 	s.uploadFile(hourly)
 	// TODO don't do this every time
